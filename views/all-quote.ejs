@@ -1,0 +1,29 @@
+<!-- views/all-quotes.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Quotes</title>
+</head>
+<body>
+  <div style="background-color: green; padding: 10px;">
+    <a href="/">Great Quotes</a> |
+    <a href="/all-quotes">All Quotes</a> |
+    <a href="/new-quote">New Quotes</a>
+  </div>
+  <h1>All Quotes</h1>
+  <div>
+    <% if (quotes.length > 0) { %>
+      <% quotes.forEach((quote) => { %>
+        <div>
+          <h3><%= quote.author %></h3>
+          <p><%= quote.quote %></p>
+        </div>
+      <% }); %>
+    <% } else { %>
+      <p>No quotes to display.</p>
+    <% } %>
+  </div>
+</body>
+</html>

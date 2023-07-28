@@ -1,0 +1,24 @@
+<!-- views/new-quote.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Quote</title>
+</head>
+<body>
+  <div style="background-color: green; padding: 10px;">
+    <a href="/">Great Quotes</a> |
+    <a href="/all-quotes">All Quotes</a> |
+    <a href="/new-quote">New Quotes</a>
+  </div>
+  <h1>Add a New Quote</h1>
+  <form action="/add-quote" method="POST">
+    <label for="author">Author:</label>
+    <input type="text" id="author" name="author" required><br>
+    <label for="quote">Quote:</label>
+    <textarea id="quote" name="quote" required></textarea><br>
+    <button type="submit">Add Quote</button>
+  </form>
+</body>
+</html>
